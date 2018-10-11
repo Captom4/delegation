@@ -12,6 +12,14 @@ class TodoList
   def get(index)
     all[index]
   end
+  
+  def to_string
+    
+  end
+  
+  def set_complete(index)
+    
+  end
 
   private
 
