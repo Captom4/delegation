@@ -1,21 +1,14 @@
 class Todo
+  
   attr_reader :description
-
+  
   def initialize(description)
     @description = description
     @complete = false
   end
-
-  def set_complete
-    @complete = true
+  
+  def complete_to_string
+    @complete == false ? "not complete" :"complete"
   end
-
-  def complete?
-    complete == true
-  end
-
-  private
-
-  attr_reader :complete
 end
 

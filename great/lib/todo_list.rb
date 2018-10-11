@@ -12,15 +12,17 @@ class TodoList
   def get(index)
     all[index]
   end
-  
-  def to_string
-    
-  end
-  
-  def set_complete(index)
-    
-  end
 
+  def to_string
+    output = ""
+    
+    @todos.each_with_index do |todo, index|
+     output += "#{index + 1}. #{todo.description} #{todo.complete_to_string}"
+    end
+    
+    output
+  end
+  
   private
 
   def all
